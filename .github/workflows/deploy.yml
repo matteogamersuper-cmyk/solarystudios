@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy-job:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,3 +20,5 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
           server-dir: /
+          # Comment
+          protocol: sftp 
