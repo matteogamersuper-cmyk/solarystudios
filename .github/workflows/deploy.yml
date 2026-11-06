@@ -3,8 +3,10 @@ name: Deploy to Zampto
 on:
   push:
     branches:
-      - main 
-  deploy:
+      - main
+
+jobs:
+  deploy-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,4 +19,4 @@ on:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
-          server-dir: / 
+          server-dir: /
