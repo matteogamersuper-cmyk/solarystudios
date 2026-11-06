@@ -1,0 +1,42 @@
+:root {
+    color-scheme: dark;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #10101b;
+    color: #f5f2ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    background:
+        radial-gradient(ellipse at 50% 35%, rgb(111 72 196 / 22%), transparent 55%),
+        linear-gradient(145deg, #10101b, #171327 60%, #10101b);
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.75rem, 8vw, 5.5rem);
+    font-weight: 750;
+    letter-spacing: -0.07em;
+    line-height: 1;
+    text-align: center;
+    background: linear-gradient(100deg, #fff 20%, #d2b8ff 75%, #a88cff);
+    background-clip: text;
+    color: transparent;
+}
+
+p {
+    max-width: 42rem;
+    margin: 0 auto;
+    color: #c4bfd2;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;
+    text-align: center;
+}
