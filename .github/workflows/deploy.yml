@@ -12,21 +12,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Sync files via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Copy files via SFTP
+        uses: appleboy/scp-action@master
         with:
-          server: ${{ secrets.SFTP_HOST }}
+          host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
-          server-dir: /
-          # Comment 1
-          # Comment 2
-          # Comment 3
-          # Comment 4
-          # Comment 5
-          # Comment 6
-          # Comment 7
-          # Comment 8
-          # Comment 9
-          # Comment 10
+          source: "."
+          target: "/" 
